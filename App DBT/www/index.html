@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mis habilidades DBT</title>
+<meta name="theme-color" content="#f3f4f1">
+<style>
+@font-face{font-family:"Inter";src:url(fonts/inter.woff2) format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url(fonts/source-serif-4.woff2) format("woff2");font-weight:500 600;font-display:swap}
+:root{--bg:#f3f4f1;--card:#ffffff;--paper:#fffefb;--ink:#1d2a2f;--mut:#65737a;--pri:#86cdc4;--pi:#13313a;--sos:#b65a50;--sosi:#fff;--line:#e2e6e3;--sh:0 1px 2px rgba(29,42,47,.04),0 8px 24px rgba(29,42,47,.05);--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161d20;--card:#1f292d;--paper:#243035;--ink:#e8eeec;--mut:#9fb0b4;--pri:#9bd8d0;--pi:#10262c;--sos:#e4958b;--sosi:#2b100d;--line:#2f3d42;--sh:none}}
+:root[data-theme="dark"]{--bg:#161d20;--card:#1f292d;--paper:#243035;--ink:#e8eeec;--mut:#9fb0b4;--pri:#9bd8d0;--pi:#10262c;--sos:#e4958b;--sosi:#2b100d;--line:#2f3d42;--sh:none}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--sans);letter-spacing:-.006em;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;padding-bottom:104px}
+main{max-width:560px;margin:0 auto;padding:16px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;color:var(--ink)}
+h1{font-size:1.9rem;line-height:1.1;margin:4px 0 0}h2{font-size:1.35rem;line-height:1.25;margin:0 0 6px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin:14px 0 20px}
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.iconbtn{width:44px;height:44px;flex:none;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);cursor:pointer}
+nav{display:flex;gap:4px;padding:4px;margin-bottom:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh)}
+nav button{flex:1;min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:0;border-radius:12px;background:transparent;color:var(--mut);font:500 .8rem/1.2 var(--sans);cursor:pointer;transition:background .2s,color .2s}
+nav button[aria-current=page]{background:var(--pri);color:var(--pi);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:14px;box-shadow:var(--sh)}
+.mut{color:var(--mut)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:0;border-radius:12px;background:var(--pri);color:var(--pi);font:600 .95rem/1 var(--sans);letter-spacing:0;text-decoration:none;cursor:pointer;transition:transform .1s,filter .2s}
+.btn:active{transform:scale(.98)}.btn:hover{filter:brightness(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.sos{background:var(--sos);color:var(--sosi)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.chip{min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:500 .92rem/1 var(--sans);cursor:pointer;transition:background .15s,border-color .15s}
+.chip.on{background:var(--pri);color:var(--pi);border-color:var(--pri);font-weight:600}
+.chip.d{border-color:var(--sos);color:var(--sos);font-weight:600}
+input,select,textarea{width:100%;min-height:46px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:400 1rem/1.4 var(--sans);margin:6px 0 14px;transition:border-color .15s}
+textarea{resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--pri);outline:none}
+input[type=range]{padding:0;min-height:32px;border:0;background:none;accent-color:var(--pri)}
+input[type=file]{font-size:.9rem;color:var(--mut)}
+input[type=file]::file-selector-button{margin-right:10px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:600 .85rem var(--sans)}
+label{font-weight:600;font-size:.9rem;display:block}
+details{border-top:1px solid var(--line);padding:4px 0}.card>details:first-child,details.card{border-top:0;padding-top:0}details.card{padding-top:14px}
+summary{list-style:none;display:flex;align-items:center;gap:12px;font-weight:600;cursor:pointer;min-height:48px;padding:6px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;margin:0 4px 0 auto;width:7px;height:7px;border-right:2px solid var(--mut);border-bottom:2px solid var(--mut);transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
+details[open]>summary::after{transform:rotate(-135deg)}
+summary .sub{display:block;font-weight:400;font-size:.88rem;color:var(--mut);line-height:1.4}
+.ic{flex:none;display:inline-grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--bg);color:var(--ink);font-weight:400}
+ol{padding-left:1.3em;margin:6px 0 14px}li{margin:8px 0;padding-left:4px}li::marker{color:var(--mut);font-weight:600}
+a{color:inherit;text-underline-offset:3px}
+.sheet{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 22px 20px;margin-bottom:14px;box-shadow:var(--sh)}
+.sheet::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--pri)}
+.sheet.flag::before{background:var(--sos)}
+.sheet h3{font-size:1.75rem;line-height:1.15;margin:4px 0 14px}.sheet p{margin:12px 0}
+.sheet small{color:var(--mut);font-size:.8rem;letter-spacing:.02em}
+.sheet b{display:block;margin-bottom:2px;font:600 .68rem/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}.sheet b+br{display:none}
+.flag{box-shadow:inset 4px 0 0 var(--sos),var(--sh)}
+.stat{display:flex;align-items:center;gap:16px;padding:16px 20px}.stat .num{font:500 2.4rem/1 var(--serif);min-width:1.2em;text-align:center}
+.sosbar{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--bg);background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.sosbar button{width:100%;max-width:528px;display:block;margin:0 auto;min-height:52px;border:0;border-radius:14px;background:var(--sos);color:var(--sosi);font:600 1rem/1 var(--sans);letter-spacing:.005em;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+</style></head><body>
+<script id="cfg" type="application/json">{}</script>
+<main><header><div><div class="eyebrow">Registro DBT</div><h1 id="ttl">Mis habilidades</h1></div><button id="pb" class="iconbtn" onclick="togglePal()" aria-label="Cambiar colores"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18c1.1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 005-5c0-4-4-7.4-9-7.4z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7" r="1"/><circle cx="15.5" cy="7.5" r="1"/></svg></button></header><div id="pp" class="card" hidden></div>
+<nav id="nav"></nav><div id="v"></div></main>
+<div class="sosbar"><button onclick="flow={step:'sos'};tab='home';render()">Consultar a mi terapeuta</button></div>
+<script>
+const SK={
+TIP:{n:"TIP",d:"Cuando la emoción es muy intensa y el cuerpo va acelerado.",s:["Temperatura: agua fría o hielo en la cara o las manos por 30 segundos (consúltalo antes si tienes problemas cardíacos).","Ejercicio intenso: 10 minutos de movimiento rápido.","Respiración pausada: inhala 4 segundos, exhala 6 a 8.","Relajación muscular progresiva: tensa y suelta cada grupo muscular."]},
+STOP:{n:"STOP",d:"Cuando sientes el impulso de actuar sin pensar.",s:["Stop: congélate, no actúes todavía.","Toma distancia: un paso atrás y respira hondo.","Observa: qué pasa dentro de ti y a tu alrededor.","Procede con atención: elige lo que te acerque a tu meta."]},
+ACCEPTS:{n:"ACCEPTS",d:"Distracciones para atravesar la ola sin empeorarla (no es aceptación radical).",s:["Actividades: haz algo que requiera atención.","Contribuir: ayuda a alguien.","Comparar con momentos más difíciles que ya superaste.","Emociones opuestas: música o video que cambie el ánimo.","Poner a un lado: guarda el problema en una caja imaginaria.","Pensamientos: cuenta, rima, resuelve un puzzle.","Sensaciones: ducha tibia, olor o sabor intenso."]},
+VAL:{n:"Validación",d:"Cuando te juzgas por lo que sientes.",s:["Describe lo que sientes, sin juicios.","Pregúntate: ¿por qué tiene sentido que me sienta así?","Dite lo que le dirías a alguien que quieres."]},
+OPUESTA:{n:"Acción opuesta",d:"Cuando la emoción no encaja con los hechos o no te ayuda.",s:["Nombra la emoción y el impulso que trae.","Revisa los hechos: ¿la emoción encaja?","Actúa en lo opuesto al impulso, con todo el cuerpo, la postura y la voz."]},
+RADICAL:{n:"Aceptación radical",d:"Cuando luchas contra algo que ya pasó o que no puedes cambiar ahora.",s:["Nota que estás peleando contra la realidad.","Recuerda que la realidad es como es y que tiene causas.","Acepta con todo el cuerpo: manos abiertas, media sonrisa, respiración lenta.","Aceptar no es aprobar: actúa según tu meta."]},
+SABIA:{n:"Mente sabia",d:"Cuando no sabes si decides desde la emoción o desde la lógica.",s:["Mente emocional: ¿qué sientes y qué te empuja a hacer? Aquí los hechos pesan poco.","Mente racional: ¿cuáles son los hechos y qué dice la lógica? Aquí los sentimientos y valores pesan poco.","Respira: inhala pensando «sabia», exhala pensando «mente», y pregúntale qué ve.","Mente sabia: ¿qué respuesta respeta a la vez tus sentimientos y los hechos?"]},
+MINDFUL:{n:"Conciencia plena",d:"Para volver al momento presente sin juzgarte (mindfulness).",s:["Observar: nota lo que ves, oyes, sientes y piensas, sin tratar de cambiarlo.","Describir: ponle palabras solo a los hechos, como «siento tensión en el pecho».","Participar: entra por completo en lo que estás haciendo ahora.","Sin juzgar: ve los hechos, sin etiquetarlos de buenos o malos.","Una cosa a la vez: dedica toda tu atención a una sola cosa.","Con eficacia: haz lo que funciona para tu meta."]},
+POSITIVO:{n:"Acumular emociones positivas",d:"Para aumentar las experiencias positivas, hoy y a largo plazo.",s:["Corto plazo: haz cada día al menos una actividad agradable.","Atención plena a lo positivo: preséntate por completo y, si la mente se va a cuándo terminará, vuelve al momento.","Largo plazo: identifica tus valores y elige una meta que los respete.","Da un paso pequeño hacia esa meta y anótalo en tu bitácora."]}};
+const EM=[{k:"Estoy en peligro o quiero hacerme daño",sos:1},{k:"Rabia",sk:["STOP","TIP","OPUESTA"]},{k:"Ansiedad",sk:["TIP","SABIA","STOP","MINDFUL"]},{k:"Tristeza",sk:["ACCEPTS","VAL","RADICAL","OPUESTA"]},{k:"Vacío",sk:["ACCEPTS","VAL","SABIA","MINDFUL"]},{k:"Vergüenza",sk:["VAL","OPUESTA"]},{k:"Soledad",sk:["VAL","ACCEPTS","OPUESTA","MINDFUL"]},{k:"Miedo",sk:["TIP","SABIA","OPUESTA","MINDFUL"]},{k:"Culpa",sk:["VAL","OPUESTA","RADICAL","SABIA"]},{k:"Alegría",sk:["POSITIVO","MINDFUL"]},{k:"Amor",sk:["POSITIVO","MINDFUL","VAL"]},{k:"Esperanza",sk:["POSITIVO","SABIA","MINDFUL"]}];
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let S={cfg:{wa:""},notes:[],my:{}};
+try{S=Object.assign(S,JSON.parse(localStorage.getItem("dbt")||"{}"))}catch(e){}
+if(S.v!==2){S.notes=[];S.my={};S.v=2;try{localStorage.setItem("dbt",JSON.stringify(S))}catch(e){}}
+S.notes.forEach(n=>{n.k=n.k||(n.s?[n.s]:[])});
+const save=()=>{try{localStorage.setItem("dbt",JSON.stringify(S))}catch(e){}};
+let tab="home",flow=null;
+const P=d=>`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const IC={home:P('<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>'),skills:P('<path d="M12 3l2.6 6.4L21 12l-6.4 2.6L12 21l-2.6-6.4L3 12l6.4-2.6z"/>'),diary:P('<path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h11"/>')};
+const ICON={TIP:P('<path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"/><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5"/>'),STOP:P('<path d="M8 3h8l5 5v8l-5 5H8l-5-5V8z"/><path d="M8.5 12h7"/>'),ACCEPTS:P('<path d="M4 15v-3a8 8 0 0116 0v3"/><rect x="3" y="14" width="5" height="7" rx="2"/><rect x="16" y="14" width="5" height="7" rx="2"/>'),VAL:P('<path d="M4 5h16v11H10l-6 4z"/>'),OPUESTA:P('<path d="M4 8h15l-3-3M20 16H5l3 3"/>'),SABIA:P('<circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 000 9 4.5 4.5 0 010 9"/>'),RADICAL:P('<path d="M2 10c2.5-3 4.5-3 7 0s4.5 3 7 0 4.5-3 6 0M2 16c2.5-3 4.5-3 7 0s4.5 3 7 0 4.5-3 6 0"/>'),MINDFUL:P('<path d="M5 20c0-9 5-15 15-15 0 10-6 15-14 15"/><path d="M5 20l9-9"/>'),POSITIVO:P('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>')};
+let C={};try{C=JSON.parse($("#cfg").textContent)||{}}catch(e){}
+(function(){const r=document.documentElement.style,t=$("#ttl");
+ if(C.title)t.textContent=C.title;
+ if(C.logo){const l=C.logo.startsWith("data:")?`<img src="${C.logo}" alt="" style="height:1.3em;vertical-align:-.25em;border-radius:6px">`:esc(C.logo);t.innerHTML=l+" "+esc(t.textContent)}
+ if(C.font){const l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family="+encodeURIComponent(C.font).replace(/%20/g,"+")+":wght@400;700&display=swap";document.head.appendChild(l);document.body.style.fontFamily=`"${C.font}",system-ui,sans-serif`}
+ if(C.pri){r.setProperty("--pri",C.pri);const h=C.pri.slice(1),L=[0,2,4].reduce((a,i,j)=>a+parseInt(h.substr(i,2),16)*[.299,.587,.114][j],0);r.setProperty("--pi",L>150?"#13313a":"#fff")}
+ if(C.icons)Object.assign(ICON,C.icons)
+ if(C.sos){const b=$(".sosbar button");b.textContent=C.sos+" "+b.textContent}
+ if(C.appIcon)["icon","apple-touch-icon"].forEach(rel=>{const l=document.createElement("link");l.rel=rel;l.href=C.appIcon;document.head.appendChild(l)})})();
+const PALS=[["Menta","#86cdc4","#eef4f2","#d3e0dc","#192226","#223038","#33474f"],["Lavanda","#b9a7e8","#f2eff9","#ddd7ee","#1f1c2b","#2a2639","#3d3752"],["Rosa","#f0b6c8","#faf0f3","#ecd6dd","#2a1d22","#37272e","#4d3640"],["Cielo","#a9c9f0","#eef3fa","#d3deee","#18212d","#212d3d","#31435a"],["Durazno","#f6c9a8","#fbf3ec","#ecdccd","#2a2119","#382d23","#50402f"],["Salvia","#b5d3a8","#f1f6ee","#d9e5d2","#1c241a","#263222","#384a33"],["Niebla","#b8c4d0","#f1f3f5","#dce1e6","#1c2024","#272c32","#3a4149"],["Arena","#e3cfae","#f8f4ec","#e6dcc8","#25211a","#322d24","#4a4234"],["Coral","#f4b0a6","#fbf0ee","#efd8d4","#2b1f1d","#392a27","#503a36"],["Limón","#e6e3a0","#f7f6e8","#e4e2c4","#24241a","#31311f","#48482e"],["Malva","#cdb4cc","#f6f0f5","#e5d8e3","#261f26","#332b33","#4a3f4a"],["Océano","#8fc4d6","#ecf4f7","#cfe1e8","#162328","#1f323a","#2e4a55"]];
+const pri=c=>{const r=document.documentElement.style,h=c.slice(1),L=[0,2,4].reduce((a,i,j)=>a+parseInt(h.substr(i,2),16)*[.299,.587,.114][j],0);r.setProperty("--pri",c);r.setProperty("--pi",L>150?"#13313a":"#fff")};
+function applyPal(n){const r=document.documentElement.style,p=PALS.find(x=>x[0]===n)||PALS[0],d=matchMedia("(prefers-color-scheme:dark)").matches||document.documentElement.dataset.theme==="dark";
+ pri(p[1]);r.setProperty("--bg",d?p[4]:p[2]);r.setProperty("--line",d?p[6]:p[3]);if(d){r.setProperty("--card",p[5]);r.setProperty("--paper",p[5])}else{r.removeProperty("--card");r.removeProperty("--paper")}}
+let cp=S.pal||C.pal||"Menta";applyPal(cp);if(C.pri&&!S.pal)pri(C.pri);
+try{matchMedia("(prefers-color-scheme:dark)").addEventListener("change",()=>applyPal(cp))}catch(e){}
+if(C.noPal)$("#pb").hidden=true;
+function togglePal(){const p=$("#pp");p.hidden=!p.hidden;if(!p.hidden)palUI()}
+function palUI(){$("#pp").innerHTML=`<b>Colores</b><div class="row">${PALS.map(p=>`<button class="chip" style="background:${p[1]};color:#13313a;border-color:${p[1]};${p[0]===cp?"outline:3px solid var(--ink);outline-offset:2px":""}" onclick="setPal('${p[0]}')">${p[0]}</button>`).join("")}</div>`}
+function setPal(n){cp=n;S.pal=n;save();applyPal(n);palUI()}
+const back=js=>`<button class="btn ghost" onclick="${js}">← Atrás</button>`;
+function contact(msg){const n=(S.cfg.wa||"").replace(/\D/g,"");
+ const box=`<details ${n?"":"open"}><summary>${n?"Cambiar número de mi terapeuta":"Agregar número de mi terapeuta"}</summary><input id="cw" inputmode="tel" placeholder="Con código de país, ej. 51999999999" value="${esc(S.cfg.wa||"")}"><button class="btn ghost" onclick="S.cfg.wa=$('#cw').value;save();render()">Guardar número</button></details>`;
+ return(n?`<div class="row"><a class="btn sos" href="whatsapp://send?phone=${n}&amp;text=${encodeURIComponent(msg)}">Escribir por WhatsApp</a><a class="btn ghost" href="tel:+${n}">Llamar</a></div><p class="mut">¿No abre? <a href="https://wa.me/${n}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Usar enlace web</a></p>`:`<p class="mut">Agrega el número de tu terapeuta para escribirle o llamarle.</p>`)+box}
+const go=s=>{pend=null;flow={step:s,emo:null,int:5,t:"",sel:[],r:"",f:false};render()};
+const when=n=>new Date(n.d).toLocaleDateString("es",{day:"numeric",month:"long"})+", "+new Date(n.d).toLocaleTimeString("es",{hour:"2-digit",minute:"2-digit"});
+function sheet(n,d){return`<article class="sheet ${n.f?"flag":""}"><small>${when(n)}</small><h3>${esc(n.e)}</h3><p><b>Intensidad</b> ${n.i}/10</p>${n.t?`<p><b>Qué pasaba</b><br>${esc(n.t)}</p>`:""}<p><b>Habilidades que intenté</b><br>${n.k.length?esc(n.k.join(", ")):"Ninguna todavía"}</p>${n.r?`<p><b>Cómo me fue</b><br>${esc(n.r)}</p>`:""}${n.f?`<p><b>Quiero hablarlo con mi terapeuta</b></p>`:""}${n.img?`<img src="${n.img}" alt="Foto de mi nota" style="max-width:100%;border-radius:8px;margin-top:6px">`:""}${d===-1?"":sendBtn(n)}${d>0?`<div class="row"><button class="btn ghost" onclick="del(${n.d})">Borrar</button></div>`:""}</article>`}
+function sendBtn(n){const w=(S.cfg.wa||"").replace(/\D/g,"");return`<div class="row"><button class="btn ghost" onclick="poster(${n.d})">Crear imagen</button>${w?`<a class="btn ghost" href="whatsapp://send?phone=${w}&amp;text=${encodeURIComponent("Mi hoja: "+txt(n))}">Enviar a mi terapeuta</a>`:""}</div>${w?"":`<p class="mut">Agrega el número de tu terapeuta en el botón rojo para enviar esta hoja.</p>`}`}
+const txt=n=>`${n.e} (${n.i}/10, ${when(n)}). Pasaba: ${n.t||"-"}. Intenté: ${n.k.join(", ")||"nada aún"}. Me fue: ${n.r||"-"}.`;
+function home(){
+ const wk=S.notes.filter(n=>Date.now()-n.d<6048e5&&n.k.length).length,f=flow;
+ if(!f)return`<section class="card"><h2>${C.hi?esc(C.hi)+" ":""}¿Cómo estás ahora?</h2><p class="mut">Cuéntame qué sientes y te sugiero habilidades.</p><div class="row"><button class="btn" onclick="go('feel')">Empezar</button></div></section><section class="card stat"><span class="num">${wk}</span><span class="mut">veces que usé habilidades esta semana</span></section>`;
+ if(f.step==="sos")return`<section class="card"><div class="row" style="margin:0 0 10px">${back("flow=null;render()")}</div><h2>Hablar con mi terapeuta</h2><p>Si es una urgencia o estás en peligro, llama ya a tu número local de emergencias.</p>${contact("Hola, necesito apoyo ahora.")}</section>`;
+ if(f.step==="ok")return`${sheet(f.n)}${f.n.f?`<section class="card flag">${contact("Hola, quiero hablar de esto en sesión: "+txt(f.n))}</section>`:""}<div class="row"><button class="btn" onclick="flow=null;render()">Volver al inicio</button><button class="btn ghost" onclick="flow=null;tab='diary';render()">Ver mi bitácora</button></div>`;
+ if(f.step==="feel")return`<section class="card"><div class="row" style="margin:0 0 10px">${back("flow=null;render()")}</div><h2>¿Qué estás sintiendo?</h2><div class="row">${EM.map((e,i)=>`<button class="chip ${e.sos?"d":""} ${f.emo===i?"on":""}" onclick="flow.emo=${i};render()">${(C.emo&&C.emo[e.k])||""} ${e.k}</button>`).join("")}</div><label style="margin-top:14px">Intensidad: <output>${f.int}</output>/10</label><input type="range" min="0" max="10" value="${f.int}" oninput="flow.int=+this.value;this.previousElementSibling.querySelector('output').textContent=this.value"><label>¿Qué está pasando?</label><textarea rows="3" oninput="flow.t=this.value">${esc(f.t)}</textarea><div class="row"><button class="btn" ${f.emo===null?"disabled":""} onclick="flow.step='tips';render()">Ver qué puedo hacer</button></div></section>`;
+ const e=EM[f.emo];
+ if(e.sos)return`<section class="card flag"><div class="row" style="margin:0 0 10px">${back("flow.step='feel';render()")}</div><h2>Esto es lo primero</h2><p>Contacta ahora a tu terapeuta. Si el peligro es inmediato, llama a tu número local de emergencias.</p>${contact("Hola, estoy en peligro o con ganas de hacerme daño y necesito apoyo ahora.")}</section>`;
+ return`<section class="card"><div class="row" style="margin:0 0 10px">${back("flow.step='feel';render()")}</div><h2>Para ${e.k.toLowerCase()} (${f.int}/10)</h2>${e.sk.map((k,i)=>`<details ${i?"":"open"}><summary><span class="ic">${ICON[k]}</span><span>${SK[k].n}<span class="sub">${SK[k].d}</span></span></summary><ol>${SK[k].s.map(x=>`<li>${x}</li>`).join("")}</ol></details>`).join("")}</section><section class="card"><h2>Mi hoja</h2><label>Habilidades que intenté o que me pueden servir</label><div class="row" style="margin:6px 0 12px">${Object.keys(SK).map(k=>`<button class="chip ${f.sel.includes(k)?"on":""}" onclick="tg('${k}')">${SK[k].n}</button>`).join("")}</div><label>¿Cómo me fue?</label><textarea rows="2" oninput="flow.r=this.value">${esc(f.r)}</textarea><label>Foto (opcional)</label><input type="file" accept="image/*" onchange="setImg(this)"><span class="mut">${pend?"Foto lista ✓":""}</span><label style="font-weight:400"><input type="checkbox" style="width:auto;min-height:0;margin-right:8px" ${f.f?"checked":""} onchange="flow.f=this.checked">Quiero hablarlo con mi terapeuta</label><div class="row"><button class="btn" onclick="mk()">Crear mi hoja</button></div></section><section class="card ${f.int>=8?"flag":""}"><h2>¿Sigue siendo muy fuerte?</h2><p>Si lo que sientes es intenso o las habilidades no alcanzan, llama a tu terapeuta.</p>${contact(`Hola, siento ${e.k.toLowerCase()} (${f.int}/10) y necesito apoyo.`)}</section>`}
+const tg=k=>{const a=flow.sel,i=a.indexOf(k);i<0?a.push(k):a.splice(i,1);render()};
+function mk(){const f=flow,n={d:Date.now(),e:EM[f.emo].k,i:f.int,t:f.t.trim(),k:f.sel.map(k=>SK[k].n),r:f.r.trim(),f:f.f,img:pend||undefined};pend=null;S.notes.push(n);save();flow={step:"ok",n};render()}
+function skills(){return`<p class="mut">Lee cada habilidad y escribe cómo la aplicarías tú.</p>`+Object.entries(SK).map(([k,s])=>`<section class="card"><details><summary><span class="ic">${ICON[k]}</span>${s.n}</summary><p>${s.d}</p><ol>${s.s.map(x=>`<li>${x}</li>`).join("")}</ol>${k==="SABIA"?["e|Mi mente emocional dice…","r|Mi mente racional dice…","s|Mi mente sabia dice…"].map(x=>{const[i,l]=x.split("|");return`<label>${l}</label><textarea rows="2" oninput="S.my['SABIA_${i}']=this.value;save()">${esc(S.my["SABIA_"+i]||"")}</textarea>`}).join(""):`<label>Mis palabras: ¿cómo la uso yo?</label><textarea rows="3" oninput="S.my['${k}']=this.value;save()">${esc(S.my[k]||"")}</textarea>`}</details></section>`).join("")}
+function diary(){
+ const fl=S.notes.filter(n=>n.f),msg=fl.length?"Quiero hablar de esto en sesión:\n"+fl.map(txt).join("\n"):"";
+ return`<details class="card"><summary>Escribir una nota libre</summary><label>Emoción</label><select id="ne">${EM.filter(e=>!e.sos).map(e=>`<option>${e.k}</option>`).join("")}</select><label>Intensidad: <output>5</output>/10</label><input id="ni" type="range" min="0" max="10" value="5" oninput="this.previousElementSibling.querySelector('output').textContent=this.value"><label>Habilidad que intenté</label><select id="ns"><option value="">Ninguna</option>${Object.values(SK).map(s=>`<option>${s.n}</option>`).join("")}</select><label>¿Qué pasó?</label><textarea id="nt" rows="3"></textarea><label>Foto (opcional)</label><input type="file" accept="image/*" onchange="setImg(this)"><span class="mut"></span><label style="font-weight:400"><input id="nf" type="checkbox" style="width:auto;min-height:0;margin-right:8px">Quiero hablarlo con mi terapeuta</label><div class="row"><button class="btn" onclick="addNote()">Guardar nota</button></div></details>${fl.length?`<section class="card flag"><h2>Para hablar en sesión (${fl.length})</h2>${contact(msg)}</section>`:""}<p class="mut">Al borrar una nota, pasa a la papelera de este dispositivo.</p>${S.notes.slice().reverse().map(n=>sheet(n,1)).join("")||`<p class="mut">Aún no hay hojas. Se crean al terminar el flujo de Inicio.</p>`}${trashUI()}`}
+function del(id){const i=S.notes.findIndex(x=>x.d===id);if(i<0)return;const n=S.notes.splice(i,1)[0];S.trash=S.trash||[];n.del=Date.now();S.trash.push(n);save();render()}
+function rest(id){const t=S.trash||[],i=t.findIndex(x=>x.d===id);if(i<0)return;const n=t.splice(i,1)[0];delete n.del;S.notes.push(n);S.notes.sort((a,b)=>a.d-b.d);save();render()}
+let cf=null;function purge(id){if(cf!==id){cf=id;render();return}cf=null;S.trash=(S.trash||[]).filter(x=>x.d!==id);save();render()}
+function trashUI(){const t=S.trash||[];return t.length?`<details class="card"><summary>Papelera (${t.length})</summary><p class="mut">Las notas borradas se guardan aquí, en tu dispositivo. Solo tú decides si se las muestras a tu terapeuta.</p>${t.slice().reverse().map(n=>`${sheet(n,-1)}<div class="row" style="margin:-4px 0 14px"><button class="btn ghost" onclick="rest(${n.d})">Restaurar</button><button class="btn ghost" onclick="purge(${n.d})">${cf===n.d?"¿Seguro? Toca otra vez":"Eliminar definitivamente"}</button></div>`).join("")}</details>`:""}
+function addNote(){const t=$("#nt").value.trim();if(!t)return $("#nt").focus();
+ S.notes.push({d:Date.now(),e:$("#ne").value,i:+$("#ni").value,k:$("#ns").value?[$("#ns").value]:[],t,r:"",f:$("#nf").checked,img:pend||undefined});pend=null;save();render()}
+function render(){
+ $("#nav").innerHTML=[["home","Inicio"],["skills","Habilidades"],["diary","Bitácora"]].map(([k,l])=>`<button ${tab===k?'aria-current="page"':""} onclick="tab='${k}';render()">${C.tabs&&C.tabs[k]?`<span style="font-size:20px;line-height:22px">${esc(C.tabs[k])}</span>`:IC[k]}<span>${l}</span></button>`).join("");
+ $("#v").innerHTML=tab==="home"?home():tab==="skills"?skills():diary()}
+let pend=null;
+function setImg(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const s=Math.min(1,800/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*s;c.height=im.height*s;c.getContext("2d").drawImage(im,0,0,c.width,c.height);pend=c.toDataURL("image/jpeg",.7);if(inp.nextElementSibling)inp.nextElementSibling.textContent="Foto lista ✓"};im.src=r.result};r.readAsDataURL(f)}
+function wrap(c,t,x,y,w,lh){let l="";for(const q of String(t).split(/\s+/)){const z=l?l+" "+q:q;if(c.measureText(z).width>w&&l){c.fillText(l,x,y);y+=lh;l=q}else l=z}c.fillText(l,x,y);return y+lh}
+async function poster(id){
+ const n=S.notes.find(x=>x.d===id);if(!n)return;
+ try{await Promise.all([document.fonts.load('600 84px "Source Serif 4"'),document.fonts.load('400 40px "Inter"'),document.fonts.load('700 40px "Inter"')])}catch(e){}
+ const F='"Inter",system-ui,sans-serif',FS='"Source Serif 4",Georgia,serif',W=1080,ac=n.f?"#e58a82":"#8fd3cb";
+ let img=null;if(n.img)img=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=n.img});
+ const c=document.createElement("canvas");c.width=W;c.height=3200;const g=c.getContext("2d");
+ g.fillStyle="#fffdf7";g.fillRect(0,0,W,3200);g.fillStyle=ac;g.fillRect(0,0,W,24);
+ g.fillStyle="#5d7078";g.font=`400 36px ${F}`;g.fillText(when(n),70,110);
+ g.fillStyle="#22323a";g.font=`600 84px ${FS}`;let y=wrap(g,n.e,70,220,W-140,96);
+ g.font=`700 40px ${F}`;g.fillText("Intensidad "+n.i+"/10",70,y+20);g.fillStyle="#dfe9e6";g.fillRect(70,y+50,W-140,26);g.fillStyle=ac;g.fillRect(70,y+50,(W-140)*n.i/10,26);y+=140;
+ const blk=(h,t)=>{g.fillStyle="#5d7078";g.font=`700 34px ${F}`;g.fillText(h,70,y);y+=50;g.fillStyle="#22323a";g.font=`400 40px ${F}`;y=wrap(g,t,70,y,W-140,54)+30};
+ if(n.t)blk("Qué pasaba",n.t);blk("Habilidades que usé",n.k.length?n.k.join(", "):"Ninguna todavía");if(n.r)blk("Cómo me fue",n.r);
+ if(img){const s=Math.min((W-140)/img.width,600/img.height),w=img.width*s,h=img.height*s;g.drawImage(img,70,y,w,h);y+=h+40}
+ if(n.f){g.fillStyle="#c4564c";g.font=`700 38px ${F}`;g.fillText("Quiero hablarlo con mi terapeuta",70,y);y+=60}
+ const o=document.createElement("canvas");o.width=W;o.height=y+40;o.getContext("2d").drawImage(c,0,0,W,y+40,0,0,W,y+40);
+ o.toBlob(b=>showImg(b,n),"image/png")}
+function showImg(b,n){const u=URL.createObjectURL(b),f=new File([b],"hoja-dbt.png",{type:"image/png"}),d=document.createElement("div");
+ d.style.cssText="position:fixed;inset:0;background:rgba(10,20,24,.9);overflow:auto;padding:16px;z-index:9";
+ d.innerHTML=`<div style="max-width:560px;margin:0 auto"><img src="${u}" alt="Mi hoja" style="width:100%;border-radius:8px"><div class="row"><button class="btn" id="sh">Compartir</button><a class="btn ghost" style="color:#fff" href="${u}" download="hoja-dbt.png">Descargar</a><button class="btn ghost" style="color:#fff" id="cl">Cerrar</button></div><p style="color:#d6ece8">Si no se abre, mantén presionada la imagen para guardarla.</p></div>`;
+ document.body.appendChild(d);d.querySelector("#cl").onclick=()=>d.remove();
+ d.querySelector("#sh").onclick=async()=>{try{if(navigator.canShare&&navigator.canShare({files:[f]}))await navigator.share({files:[f],text:txt(n)});else alert("Tu navegador no permite compartir directo. Descarga la imagen.")}catch(e){}}}
+render();
+</script></body></html>
